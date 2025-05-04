@@ -11,6 +11,14 @@ To install the package, you can use Composer. Run the following command in the r
 composer require prem/laravel-artisan-shortcuts
 ```
 
+##Add to your app’s composer.json
+"repositories": [
+      {
+            "type": "vcs",
+            "url": "https://github.com/prem-soni/prem-soni-laravel-artisan-shortcuts"
+        }        
+    ]
+
 ## Usage
 
 Once the package is installed, you can use the following shortcut commands:
