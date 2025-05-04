@@ -1,5 +1,5 @@
 {
-    "name": "prem/laravel-artisan-shortcuts",
+    "name": "premsoni/laravel-artisan-shortcuts",
     "description": "Shortcuts for Laravel Artisan commands",
     "type": "library",
     "require": {
