@@ -1,0 +1,31 @@
+{
+    "name": "prem/laravel-artisan-shortcuts",
+    "description": "Shortcuts for Laravel Artisan commands",
+    "type": "library",
+    "require": {
+        "php": ">=8.1",
+        "illuminate/console": "^10.0",
+        "illuminate/support": "^10.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Prem\\LaravelArtisanShortcuts\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Prem Soni",
+            "email": "premvadhavana@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Prem\\LaravelArtisanShortcuts\\LaravelArtisanShortcutsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
