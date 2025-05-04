@@ -17,6 +17,7 @@ composer require prem/laravel-artisan-shortcuts
             "type": "vcs",
             "url": "https://github.com/prem-soni/prem-soni-laravel-artisan-shortcuts"
         }        
+    
     ]
 
 ## Usage
