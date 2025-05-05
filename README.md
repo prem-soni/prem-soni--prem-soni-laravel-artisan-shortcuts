@@ -33,7 +33,7 @@ Once the package is installed, you can use the following shortcut commands:
 Create a new controller with the following shortcut:
 
 ```bash
-php artisan shortcut c ControllerName
+php artisan ps c ControllerName
 ```
 
 This will create a new controller named `ControllerNameController`.
@@ -43,7 +43,7 @@ This will create a new controller named `ControllerNameController`.
 Create a model along with migration, controller, and resource file:
 
 ```bash
-php artisan shortcut m ModelName
+php artisan ps m ModelName
 ```
 
 This will generate a model with the necessary components.
@@ -53,7 +53,7 @@ This will generate a model with the necessary components.
 To run the migrations:
 
 ```bash
-php artisan shortcut mig
+php artisan ps mig
 ```
 
 This will execute all pending migrations.
@@ -63,7 +63,7 @@ This will execute all pending migrations.
 To run all seeders:
 
 ```bash
-php artisan shortcut seed
+php artisan ps sd
 ```
 
 This will execute all the seeders for your database.
@@ -73,7 +73,7 @@ This will execute all the seeders for your database.
 To list all the routes defined in the application:
 
 ```bash
-php artisan shortcut rlist
+php artisan ps rlist
 ```
 
 This will show all available routes.
@@ -83,7 +83,7 @@ This will show all available routes.
 To start the Laravel development server:
 
 ```bash
-php artisan shortcut s
+php artisan ps s
 ```
 
 This will run `php artisan serve`.
@@ -93,7 +93,7 @@ This will run `php artisan serve`.
 To refresh the database by rolling back all migrations and re-running them:
 
 ```bash
-php artisan shortcut migrate:refresh
+php artisan ps mip
 ```
 
 This will execute `php artisan migrate:refresh`.
