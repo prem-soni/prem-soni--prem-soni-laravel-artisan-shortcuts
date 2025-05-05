@@ -8,7 +8,7 @@ A simple package to create shortcuts for common Artisan commands in Laravel.
 To install the package, you can use Composer. Run the following command in the root directory of your Laravel project:
 
 ```bash
-composer require prem/laravel-artisan-shortcuts
+composer require premsoni/laravel-artisan-shortcuts
 ```
 
 ## Installation
