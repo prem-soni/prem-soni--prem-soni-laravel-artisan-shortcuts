@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class ShortcutCommand extends Command
 {
-    protected $signature = 'shortcut {cmd} {name?}';
+    protected $signature = 'ps {cmd} {name?}';
     protected $description = 'Run Laravel Artisan commands via shortcut aliases';
 
     public function handle()
@@ -22,44 +22,44 @@ class ShortcutCommand extends Command
         //     'mig' => "migrate",
         // ];
         $shortcuts = [
-            // Create commands
-            'm'    => "make:model $name -mcr",                  // Create model with migration, controller, and resource
-            'c'    => "make:controller {$name}Controller",      // Create controller
-            'r'    => "make:route {$name}",                      // Create route (assuming you have this as an alias)
-            'f'    => "make:factory {$name}Factory",             // Create factory
-            's'    => "make:seeder {$name}Seeder",               // Create seeder
-            'p'    => "make:policy {$name}Policy",               // Create policy
-            'migr' => "make:migration create_{$name}_table",     // Create migration (add `create_{$name}_table`)
-            
-            // Migration and Seeder commands
-            'mig'  => "migrate",                                // Run all migrations
-            'migf' => "migrate --force",                        // Run migrations with --force
-            'migr' => "migrate:reset",                          // Reset migrations
-            'migrb' => "migrate:rollback",                      // Rollback the last migration
-            'migrp' => "migrate:refresh",                       // Refresh migrations (rollback and re-run)
-            'migrstatus' => "migrate:status",                   // Show the status of migrations
-            
-            'seed' => "db:seed",                                // Run all seeders
-            'seedf' => "db:seed --force",                       // Force run seeders
-            'seedclass' => "db:seed --class={$name}Seeder",     // Run specific seeder class
-            
-            // Database commands
-            'migrfile' => "migrate --path=database/migrations/{$name}.php", // Run migration by specific file name
-            
+            // Make commands
+            'm'  => "make:model $name -mcr",           // model + migration + controller + resource
+            'c'  => "make:controller {$name}Controller", // controller
+            'f'  => "make:factory {$name}Factory",     // factory
+            'sdr' => "make:seeder {$name}Seeder",      // seeder
+            'p'  => "make:policy {$name}Policy",       // policy
+            'migc' => "make:migration create_{$name}_table", // migration create
+            'migf' => "migrate --force",               // migrate force
+        
+            // Migration commands
+            'mi' => "migrate",                         // migrate
+            'mir' => "migrate:reset",                  // migrate reset
+            'mib' => "migrate:rollback",               // migrate rollback
+            'mip' => "migrate:refresh",                // migrate refresh
+            'mis' => "migrate:status",                 // migrate status
+            'mif' => "migrate --path=database/migrations/{$name}.php", // run specific migration
+        
+            // Seeder commands
+            'sd' => "db:seed",                         // db seed
+            'sdf' => "db:seed --force",                // db seed force
+            'sdc' => "db:seed --class={$name}Seeder",  // seed specific class
+        
             // Route commands
-            'rlist' => "route:list",                            // List all routes
-            'rcache' => "route:cache",                          // Cache the routes
-            'rclear' => "route:clear",                          // Clear the route cache
-            
-            // Other commands
-            'clear' => "cache:clear",                           // Clear application cache
-            'configcache' => "config:cache",                    // Cache the config
-            'configclear' => "config:clear",                    // Clear config cache
-            'optim' => "optimize",                              // Optimize the application
-            'viewclear' => "view:clear",                        // Clear view cache
-            'm' => "make:model $name -mcr",                     // Shortcut for creating model, migration, controller
-            'tinker' => "tinker",                               // Open tinker (interactive shell)
+            'rl' => "route:list",                      // route list
+            'rc' => "route:cache",                     // route cache
+            'rcl' => "route:clear",                    // route clear
+        
+            // Cache/config/view
+            'cc' => "cache:clear",                     // clear cache
+            'cfgc' => "config:cache",                  // config cache
+            'cfgcl' => "config:clear",                 // config clear
+            'vc' => "view:clear",                      // view clear
+            'opt' => "optimize",                       // optimize
+        
+            // Tinker
+            'tk' => "tinker",                          // tinker shell
         ];
+        
         
 
         if (!isset($shortcuts[$cmd])) {

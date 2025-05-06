@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'prem/laravel-artisan-shortcuts',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'name' => 'premsoni/laravel-artisan-shortcuts',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'a7664d5437e517297ad9889341477865a7b18537',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -163,10 +163,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'prem/laravel-artisan-shortcuts' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+        'premsoni/laravel-artisan-shortcuts' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'a7664d5437e517297ad9889341477865a7b18537',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
