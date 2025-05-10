@@ -51,7 +51,7 @@ class ShortcutCommand extends Command
         'cfgc' => "config:cache",
         'cfgcl'=> "config:clear",
         'vc'   => "view:clear",
-        'opt'  => "optimize",
+        'opt'  => "optimize:clear",
     ];
 
     if (!isset($shortcuts[$cmd])) {
