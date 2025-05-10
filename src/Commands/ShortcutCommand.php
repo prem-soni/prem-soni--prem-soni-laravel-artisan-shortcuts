@@ -22,45 +22,45 @@ class ShortcutCommand extends Command
         //     'mig' => "migrate",
         // ];
        $shortcuts = [
-    // Make commands
-    'm'    => "make:model $name -mcr",
-    'c'    => "make:controller {$name}Controller",
-    'f'    => "make:factory {$name}Factory",
-    'sdr'  => "make:seeder {$name}Seeder",
-    'p'    => "make:policy {$name}Policy",
-    'migc' => "make:migration create_{$name}_table",
-    'migf' => "migrate --force",
+            's'    => "serve",  // ← This line allows `php artisan ps s`
+            'tk'   => "tinker",
+           // Make commands
+            'm'    => "make:model $name -mcr",
+            'c'    => "make:controller {$name}Controller",
+            'f'    => "make:factory {$name}Factory",
+            'sdr'  => "make:seeder {$name}Seeder",
+            'p'    => "make:policy {$name}Policy",
+            'migc' => "make:migration create_{$name}_table",
+            'migf' => "migrate --force",
+        
+            // Migration commands
+            'mi'   => "migrate",
+            'mir'  => "migrate:reset",
+            'mib'  => "migrate:rollback",
+            'mip'  => "migrate:refresh",
+            'mis'  => "migrate:status",
+            'mif'  => "migrate --path=database/migrations/{$name}.php",
+        
+            // Seeder commands
+            'sd'   => "db:seed",
+            'sdf'  => "db:seed --force",
+            'sdc'  => "db:seed --class={$name}Seeder",
 
-    // Migration commands
-    'mi'   => "migrate",
-    'mir'  => "migrate:reset",
-    'mib'  => "migrate:rollback",
-    'mip'  => "migrate:refresh",
-    'mis'  => "migrate:status",
-    'mif'  => "migrate --path=database/migrations/{$name}.php",
-
-    // Seeder commands
-    'sd'   => "db:seed",
-    'sdf'  => "db:seed --force",
-    'sdc'  => "db:seed --class={$name}Seeder",
-
-    // Route commands
-    'rl'   => "route:list",
-    'rc'   => "route:cache",
-    'rcl'  => "route:clear",
-
-    // Cache/config/view
-    'cc'   => "cache:clear",
-    'cfgc' => "config:cache",
-    'cfgcl'=> "config:clear",
-    'vc'   => "view:clear",
-    'opt'  => "optimize",
-
-    // Other
-    's'    => "serve",  // ← This line allows `php artisan ps s`
-    'tk'   => "tinker",
-];
- 
+            // Route commands
+            'rl'   => "route:list",
+            'rc'   => "route:cache",
+            'rcl'  => "route:clear",
+        
+            // Cache/config/view
+            'cc'   => "cache:clear",
+            'cfgc' => "config:cache",
+            'cfgcl'=> "config:clear",
+            'vc'   => "view:clear",
+            'opt'  => "optimize",
+        
+            // Other
+        ];
+         
         
 
         if (!isset($shortcuts[$cmd])) {
