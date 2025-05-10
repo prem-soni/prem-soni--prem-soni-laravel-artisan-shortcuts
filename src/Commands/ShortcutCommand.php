@@ -14,15 +14,8 @@ class ShortcutCommand extends Command
         $cmd = $this->argument('cmd');
         $name = $this->argument('name');
 
-        // $shortcuts = [
-        //     'm' => "make:model $name -mcr",
-        //     'c' => "make:controller {$name}Controller",
-        //     'r' => "route:list",
-        //     's' => "serve",
-        //     'mig' => "migrate",
-        // ];
        $shortcuts = [
-            'se'    => "serve",  // ← This line allows `php artisan ps s`
+            's'    => "serve",
             'tk'   => "tinker",
            // Make commands
             'm'    => "make:model $name -mcr",
