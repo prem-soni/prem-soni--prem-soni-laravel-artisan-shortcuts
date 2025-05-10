@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class ShortcutCommand extends Command
 {
-    protected $signature = 'ps {cmd} {name?}';
+    protected $signature = 'p {cmd} {name?}';
     protected $description = 'Run Laravel Artisan commands via shortcut aliases';
 
   public function handle()
