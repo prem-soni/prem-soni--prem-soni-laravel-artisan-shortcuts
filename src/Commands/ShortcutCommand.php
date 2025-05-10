@@ -22,7 +22,7 @@ class ShortcutCommand extends Command
         //     'mig' => "migrate",
         // ];
        $shortcuts = [
-            's'    => "serve",  // ← This line allows `php artisan ps s`
+            'se'    => "serve",  // ← This line allows `php artisan ps s`
             'tk'   => "tinker",
            // Make commands
             'm'    => "make:model $name -mcr",
